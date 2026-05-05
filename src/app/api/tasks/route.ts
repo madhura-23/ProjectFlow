@@ -24,9 +24,9 @@ export async function POST(req: Request) {
     const data = CreateTaskSchema.parse(body);
     const demoUser = await prisma.user.findFirst();
     if (!demoUser) return NextResponse.json({ error: "No user" }, { status: 400 });
-    const last = await prisma.task.findFirst({ 
-      where: { projectId: data.projectId }, 
-      orderBy: { position: "desc" } 
+    const last = await prisma.task.findFirst({
+      where: { projectId: data.projectId },
+      orderBy: { position: "desc" },
     });
     const position = (last?.position ?? 0) + 1000;
     const task = await prisma.task.create({
