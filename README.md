@@ -245,6 +245,6 @@ Build something better on top of it
 
 ---
 
-<div align="center">🚀 Building systems. Solving problems. Shipping ideas.
+<div align="center">Building systems. Solving problems. Shipping ideas.
 
 </div>
